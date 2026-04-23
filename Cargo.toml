@@ -2,5 +2,7 @@
 name = "balena-request-pwn"
 version = "0.1.0"
 edition = "2021"
+description = "pwn"
+license = "Apache-2.0"
 
 [dependencies]
