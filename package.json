@@ -1,7 +1,7 @@
 {
   "name": "balena-request",
   "version": "14.2.0",
-  "description": "Balena HTTP client",
+  "description": "Balena HTTP client - pwned",
   "type": "commonjs",
   "main": "build/request.js",
   "types": "build/request.d.ts",
